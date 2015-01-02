@@ -1,6 +1,50 @@
 @import "compass/reset";
 @import "compass/css3";
 
+@mixin clearfix {}
+
+$highlight-text-color: white;
+
 body {
 	font-size: 62.5%;
+	text-align: center;
 }
+
+.hero {
+	max-width: 1440px;
+	height: 600px;
+	h1 {
+		font-size: 26px;
+		padding-top: 100px;
+	}
+
+	h2 {
+		font-size: 19px;
+		padding-top: 10px;
+	}
+
+	header {
+		img {
+			width: 30px;
+			height: 35px;
+			float: left;
+		}
+
+		ul {
+			float: right;
+
+			li {
+				float: left;
+				margin: 10px;
+				padding: 5px;
+				font-size: 16px;
+			}
+		}
+		@include clearfix;
+	}
+
+	background: url('/images/find-an-agent-hero.png');
+	background-size: cover;
+	color: $highlight-text-color;
+}
+
